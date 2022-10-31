@@ -1,14 +1,7 @@
+import { UI } from "./UI"
+
 export const weather = (() => {
-    function convertWeather(items) {
-        const
-            {name : cityName,
-            main: {temp : temperature, feels_like: feelsLike, humidity: humid},
-            wind: {speed: windSpeed}} = items
-
-        return {cityName, temperature, feelsLike, windSpeed, humid}
-    }
-
-    async function getLocation(location) {
+        async function getLocation(location) {
         let locationName = `http://api.openweathermap.org/geo/1.0/direct?q=${location}}&limit=1&appid=d3293a04fec44f7f2ad2190b9795f011`
         try {
             const response = await fetch(locationName, {mode:'cors'})
@@ -36,6 +29,16 @@ export const weather = (() => {
             alert(error)
             return null
         }
+    }
+
+    function convertWeather(items) {
+        const
+            {name : cityName,
+            main: {temp : temperature, feels_like: feelsLike, humidity: humid},
+            wind: {speed: windSpeed}} = items
+
+        UI.populateHTML(items)
+        // return {cityName, temperature, feelsLike, windSpeed, humid}
     }
 
     return {convertWeather, getLocation}

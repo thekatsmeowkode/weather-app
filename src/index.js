@@ -1,4 +1,5 @@
-const { weather } = require("./weather")
+import { weather } from "./weather"
+import {UI} from './UI.js'
 
 const submitButton = document.querySelector('.submit-button')
 const searchForm = document.querySelector('.search-form')
@@ -10,5 +11,4 @@ submitButton.addEventListener('click', async (e) => {
     e.preventDefault()
     if (searchQuery.value === '') return
     const weatherData = await weather.getLocation(searchQuery.value)
-    
 })
