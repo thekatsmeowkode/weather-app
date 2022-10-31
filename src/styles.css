@@ -32,19 +32,52 @@ body {
     justify-content: center;
     align-items: center;
     padding:1rem;
-    height:30%;
 }
 
 .card {
     display:grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     border: 1px solid black;
-    width: 30%;
-    justify-content: center;
+    justify-items: flex-start;
     align-items: center;
 }
 
 .card > * {
     margin: 1rem;
+}
+
+.legend {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    gap:1rem;
+}
+
+#green-zone {
+    height: 20px;
+    width: 20px;
+    background-color: green;
+}
+
+#yellow-zone {
+    height: 20px;
+    width: 20px;
+    background-color: yellow;
+}
+
+#red-zone {
+    height: 20px;
+    width: 20px;
+    background-color: red;
+}
+
+.warnings {
+    display:flex;
+    justify-content: center;
+    gap:2rem;
+}
+
+li {
+    padding:.5rem;
 }

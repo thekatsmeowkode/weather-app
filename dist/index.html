@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="/home/thekatsmeowkode/repos/weather-app/src/styles.css">
     <title>Child Care Iowa Weather App</title>
 </head>
 <body>
@@ -12,19 +12,67 @@
     <header class='main-header'>Child Care Iowa Weather App</header>
     <div class="search-box">
         <form class='search-form'>
-        <label for="city-search"></label>
+        <label for="city-search">City Name:</label>
         <input class='query' type='text'>
         <button class='submit-button' type='submit'>Search</button>
         </form>
     </div>
+    <div class="legend">
+        <!-- <div> -->
+            <span id="green-zone"></span>
+            <p>Comfortable for Outdoor Play</p>
+        <!-- </div>
+        <div> -->
+            <span id="yellow-zone"></span>
+            <p>Caution</p>
+        <!-- </div>
+        <div> -->
+            <span id="red-zone"></span>
+            <p>Danger</p>
+        <!-- </div> -->
+    </div>
     <div class='card-container'>
         <div class="card">
+            <h3>City Name:</h3>
             <h3 class="city-name"></h3>
-            <h5 class="temperature"></h5>
+            <p>Air Temperature:</p>
+            <p class="temperature"></p>
+            <p>Feels Like Temperature:</p>
             <p class="feels-like"></p>
+            <p>Wind Speed:</p>
             <p class="wind"></p>
+            <p>Humidity:</p>
             <p class="humidity"></p>
-            <p class="zone"></p>
+            <p>Zone:</p>
+            <p class='zone'></p>
+        </div>
+    </div>
+    <div class="warnings">
+        <div class="cold-warning">
+            <ul>
+                <h3>Wind Chill</h3>
+                <li>30°is chilly and generally
+                uncomfortable</li>
+                <li>15°to 30° is cold</li>
+                <li>0° to 15° is very cold</li>
+                <li>20° to 0° is bitter cold
+                with significant risk of
+                frostbite</li>
+                <li>-20° to -60° is extreme
+                cold and frostbite is likely</li>
+                <li>-60° is frigid and exposed
+                skin will freeze in 1
+                minute</li>
+            </ul>
+        </div>
+        <div class="hot-warning">
+            <ul>
+                <h3>Heat Index</h3>
+               <li>80° or below is considered comfortable</li>
+                <li>90° is beginning to feel uncomfortable</li>
+                <li>100° is uncomfortable and may be hazardous</li>
+                <li>110° is considered dangerous</li>
+            </ul>
         </div>
     </div>
 </body>
