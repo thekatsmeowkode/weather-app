@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles.css">
+    <title>Child Care Iowa Weather App</title>
+</head>
+<body>
+    <script defer src="main.js"></script>
+    <header class='main-header'>Child Care Iowa Weather App</header>
+    <div class="search-box">
+        <form class='search-form'>
+        <label for="city-search"></label>
+        <input class='query' type='text'>
+        <button class='submit-button' type='submit'>Search</button>
+        </form>
+    </div>
+    <div class='card-container'>
+        <div class="card">
+            <h3 class="city-name"></h3>
+            <h5 class="temperature"></h5>
+            <p class="feels-like"></p>
+            <p class="wind"></p>
+            <p class="humidity"></p>
+            <p class="zone"></p>
+        </div>
+    </div>
+</body>
+</html>
