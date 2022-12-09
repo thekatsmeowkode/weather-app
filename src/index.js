@@ -1,5 +1,6 @@
 import { weather } from "./weather"
 import {UI} from './UI.js'
+import {styles} from './styles.css'
 
 const submitButton = document.querySelector('.submit-button')
 const searchForm = document.querySelector('.search-form')
