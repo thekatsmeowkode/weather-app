@@ -1,6 +1,6 @@
 import { UI } from "./UI"
 
-export const weather = (() => {
+export const weather = () => {
         async function getLocation(location) {
         let locationName = `http://api.openweathermap.org/geo/1.0/direct?q=${location}}&limit=1&appid=d3293a04fec44f7f2ad2190b9795f011`
         try {
@@ -41,5 +41,5 @@ export const weather = (() => {
         // return {cityName, temperature, feelsLike, windSpeed, humid}
     }
 
-    return {convertWeather, getLocation}
-})()
+    return {convertWeather, getLocation, getWeather}
+}

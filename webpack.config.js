@@ -1,22 +1,22 @@
-const path = require('path')
-const { mainModule } = require('process')
-const { pathToFileURL } = require('url')
+const path = require("path");
+const { mainModule } = require("process");
+const { pathToFileURL } = require("url");
 
 module.exports = {
-    entry:'./src/index.js',
-    output: {filename: 'main.js',
-            path: path.resolve(__dirname, 'dist')},
-    mode: 'development',
-    devtool:'inline-source-map',
-    module: {
-        rules: [
-          {
-            test: /\.css$/,
-            use: [
-              'style-loader',
-              'css-loader'
-            ]
-          }
-        ]
-      }
-}
+  entry: "./src/index.js",
+  output: { filename: "main.js", path: path.resolve(__dirname, "dist") },
+  mode: "development",
+  devtool: "inline-source-map",
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ["file-loader"],
+      },
+    ],
+  },
+};

@@ -1,4 +1,4 @@
-export const UI = (() => {
+export const UI = () => {
     function populateHTML(items) {
         let city = document.querySelector('.city-name')
         let temp = document.querySelector('.temperature')
@@ -90,5 +90,5 @@ export const UI = (() => {
     }
         
 
-    return {populateHTML}
-})()
+    return {populateHTML, getZone}
+}

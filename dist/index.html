@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/home/thekatsmeowkode/repos/weather-app/src/styles.css">
+    <link rel="stylesheet" href="../src/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        </style>        
     <title>Child Care Iowa Weather App</title>
 </head>
 <body>
-    <script defer src="main.js"></script>
+    <script defer src="./main.js"></script>
     <header class='main-header'>Child Care Iowa Weather App</header>
+    <div class="main-container">
+    <div class="interactive-content">
     <div class="search-box">
         <form class='search-form'>
-        <label for="city-search">City Name:</label>
+        <label for="city-search" class="city-search">City Name:</label>
         <input class='query' type='text'>
         <button class='submit-button' type='submit'>Search</button>
         </form>
@@ -45,9 +50,13 @@
             <p class="humidity"></p>
             <p>Zone:</p>
             <p class='zone'></p>
+            <p>Warning Label:</p>
+            <p class="warning-label"></p>
         </div>
     </div>
-    <div class="warnings">
+</div>
+    <!-- <div class="warnings">
+    
         <div class="cold-warning">
             <ul>
                 <h3>Wind Chill</h3>
@@ -73,7 +82,11 @@
                 <li>100° is uncomfortable and may be hazardous</li>
                 <li>110° is considered dangerous</li>
             </ul>
-        </div>
-    </div>
+        </div> -->
+<div class="image-content">
+        <div class="image-holder"></div>
+        <div class="chart-holder"></div>
+</div>
+</div>
 </body>
 </html>
