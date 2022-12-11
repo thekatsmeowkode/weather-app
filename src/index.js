@@ -46,7 +46,7 @@ async function getLocation(location) {
 }
 
 async function getWeather(lat, lon) {
-//   let weatherData = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=d3293a04fec44f7f2ad2190b9795f011&units=imperial`;
+  let weatherData = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=d3293a04fec44f7f2ad2190b9795f011&units=imperial`;
 
     // let weatherData = `https://childcare-aware-weather-app.netlify.app/api/lat=${lat}&lon=${lon}&appid=d3293a04fec44f7f2ad2190b9795f011&units=imperial`
   try {
