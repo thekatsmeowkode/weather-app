@@ -1,6 +1,6 @@
 import Information from "./childcareweatherinfo.png";
 import Chart from './childcareweatherchart.png'
-// import stylesheet from './styles.css'
+import styles from "./styles.css"
 
 
 const submitButton = document.querySelector(".submit-button");
