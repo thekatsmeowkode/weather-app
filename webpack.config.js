@@ -1,12 +1,13 @@
 const path = require("path");
-const { mainModule } = require("process");
-const { pathToFileURL } = require("url");
 
 module.exports = {
   entry: "./src/index.js",
-  output: { filename: "main.js", path: path.resolve(__dirname, "dist") },
+  output: { filename: "main.js", path: path.resolve(__dirname, "dist") , clean: true},
   mode: "development",
   devtool: "inline-source-map",
+  devServer: {
+    static: './dist',
+  },
   module: {
     rules: [
       {
@@ -15,8 +16,8 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"],
+        type: 'asset/resource'
       },
     ],
-  },
+  }
 };
