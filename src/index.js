@@ -1,6 +1,7 @@
 import Information from "./childcareweatherinfo.png";
 import Chart from './childcareweatherchart.png'
 import stylesheet from './styles.css'
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const submitButton = document.querySelector(".submit-button");
 const searchQuery = document.querySelector(".query");

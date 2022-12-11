@@ -18,5 +18,12 @@ module.exports = {
         type: 'asset/resource'
       },
     ],
-  }
+  }, 
+  plugins: [
+    new HtmlWebpackPlugin({
+        template: 'src/index.html',
+        filename: 'index.html',
+        inject: false
+    })
+],
 };
