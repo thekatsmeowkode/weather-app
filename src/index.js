@@ -7,7 +7,6 @@ const submitButton = document.querySelector(".submit-button");
 const searchQuery = document.querySelector(".query");
 const imageHolder = document.querySelector(".image-holder");
 const chartHolder = document.querySelector('.chart-holder')
-const green = `${rgb(0, 190, 0)}`
 
 submitButton.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -95,7 +94,7 @@ function getZone(items) {
   let wind = items.wind.speed;
   //SUMMER
   if (temp <= 84 && temp > 50) {
-    card.style.backgroundColor = green;
+    card.style.backgroundColor = '#50C878';
     zone.textContent = "Green";
     warningLabel.textContent = "80° or below is considered comfortable";
   } else if (temp > 84 && temp < 90) {
@@ -136,7 +135,7 @@ function getZone(items) {
   //WINTER
   else if (temp > 40 && temp <= 50) {
     if (wind <= 15) {
-      card.style.backgroundColor = green;
+      card.style.backgroundColor = '#50C878';
       zone.textContent = "Green";
       warningLabel.textContent = "30° is chilly and generally uncomfortable";
     } else {
