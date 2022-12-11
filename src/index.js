@@ -37,8 +37,8 @@ let locationName = `http://api.openweathermap.org/geo/1.0/zip?zip=${location}&ap
       throw new Error(`${location} not found`);
     }
     const locationData = await response.json();
-    let latitude = locationData[0].lat;
-    let longitude = locationData[0].lon;
+    let latitude = locationData.lat;
+    let longitude = locationData.lon;
     getWeather(latitude, longitude);
   } catch (error) {
     alert(error);
