@@ -29,12 +29,13 @@ myChart.alt = "Child Care Aware Weather Chart"
 chartHolder.appendChild(myChart)
 
 async function getLocation(location) {
+//api call for city name, in case needed later
 //   let locationName = `http://api.openweathermap.org/geo/1.0/direct?q=${location}}&limit=1&appid=d3293a04fec44f7f2ad2190b9795f011`;
 let locationName = `http://api.openweathermap.org/geo/1.0/zip?zip=${location}&appid=d3293a04fec44f7f2ad2190b9795f011`
   try {
     const response = await fetch(locationName, { mode: "cors" });
     if (!response.ok) {
-      throw new Error(`${location} not found`);
+      throw new Error(`${location} not found, please enter valid zip code`);
     }
     const locationData = await response.json();
     const parsed = JSON.parse(locationData)
