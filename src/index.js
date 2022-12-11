@@ -30,7 +30,7 @@ chartHolder.appendChild(myChart)
 
 async function getLocation(location) {
 //   let locationName = `http://api.openweathermap.org/geo/1.0/direct?q=${location}}&limit=1&appid=d3293a04fec44f7f2ad2190b9795f011`;
-let locationName = `http://api.openweathermap.org/geo/1.0/zip?zip=${location},US&appid=d3293a04fec44f7f2ad2190b9795f011`
+let locationName = `http://api.openweathermap.org/geo/1.0/zip?zip=${location}&appid=d3293a04fec44f7f2ad2190b9795f011`
   try {
     const response = await fetch(locationName, { mode: "cors" });
     if (!response.ok) {
