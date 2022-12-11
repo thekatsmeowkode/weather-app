@@ -29,7 +29,8 @@ myChart.alt = "Child Care Aware Weather Chart"
 chartHolder.appendChild(myChart)
 
 async function getLocation(location) {
-  let locationName = `http://api.openweathermap.org/geo/1.0/direct?q=${location}}&limit=1&appid=d3293a04fec44f7f2ad2190b9795f011`;
+//   let locationName = `http://api.openweathermap.org/geo/1.0/direct?q=${location}}&limit=1&appid=d3293a04fec44f7f2ad2190b9795f011`;
+let locationName = `http://api.openweathermap.org/geo/1.0/zip?zip=${location},US&appid=d3293a04fec44f7f2ad2190b9795f011`
   try {
     const response = await fetch(locationName, { mode: "cors" });
     if (!response.ok) {
@@ -47,8 +48,6 @@ async function getLocation(location) {
 
 async function getWeather(lat, lon) {
   let weatherData = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=d3293a04fec44f7f2ad2190b9795f011&units=imperial`;
-
-    // let weatherData = `https://childcare-aware-weather-app.netlify.app/api/lat=${lat}&lon=${lon}&appid=d3293a04fec44f7f2ad2190b9795f011&units=imperial`
   try {
     const response = await fetch(weatherData, { mode: "cors" });
     if (!response.ok) {
@@ -79,7 +78,7 @@ function populateHTML(items) {
   let feelsLike = document.querySelector(".feels-like");
   let wind = document.querySelector(".wind");
   let humid = document.querySelector(".humidity");
-  city.textContent = items.name;
+  city.textContent = `${items.name}, ${items.sys.country}`;
   temp.textContent = `${items.main.temp} °F`;
   feelsLike.textContent = `${items.main.feels_like} °F`;
   wind.textContent = `${items.wind.speed} MPH`;
